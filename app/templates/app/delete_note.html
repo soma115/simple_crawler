@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Are you sure?</title>
+</head>
+<body>
+
+Hey, are you sure you want to delete {{ object.title }}?
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Yeap, I'm sure.</button>
+</form>
+
+</body>
+</html>

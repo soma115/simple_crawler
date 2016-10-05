@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+
+name: {{ details.name }}<br>
+description: {{ details.description }}<br>
+date_added; {{ details.date_added }}<br>
+date_updated: {{ details.date_updated }}<br>
+count: {{ details.count }}<br>
+
+<p>
+    <a href="{% url 'category_edit_url' pk=details.pk %}">
+        <button>Edit</button>
+    </a>
+</p>
+
+<p>
+    <a href="{% url 'category_delete_url' pk=details.pk %}">
+        <button>Delete</button></a>
+</p>
+
+</body>
+</html>

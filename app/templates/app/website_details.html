@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>url: {{ details.url }}</p>
+<p>category: {{ details.category }}</p>
+
+<p>
+    <a href="{% url 'website_edit_url' pk=details.pk %}">
+        <button>Edit</button></a>
+</p>
+
+<p>
+    <a href="{% url 'website_delete_url' pk=details.pk %}">
+        <button>Delete</button></a>
+</p>
+
+<p>
+    <a href="{% url 'website_scan_url' pk=details.pk %}">
+        <button>Scan</button></a>
+</p>
+
+title: {{ details.title }}<br>
+meta_description: {{ details.meta_description }}<br>
+alexa_rank: {{ details.alexa_rank }}<br>
+category: {{ details.category }}<br>
+date_added: {{ details.date_added }}<br>
+date_updated: {{ details.date_updated }}<br>
+
+<!--TODO: wyświetl podstrony webpages wraz z ich parametrami -->
+
+</body>
+</html>

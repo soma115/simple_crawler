@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Websites</title>
+    <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+</head>
+<body>
+
+<form method="GET" action="">
+    <input type="text" name="q" placeholder="Search category" value="{{ request.GET.q }}"/>
+    <input type="submit" value="Search" />
+</form>
+
+<form method="GET" action="">
+    <input type="submit" value="Reset" />
+</form>
+
+<p>
+    <a href="{% url 'website_new_url'%}">
+        <button>Add new Website</button>
+    </a>
+</p>
+
+<p>{% render_table table %}</p>
+
+
+</body>
+</html>
