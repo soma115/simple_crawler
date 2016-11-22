@@ -2,7 +2,7 @@
 
 Uses Celery, BeautifulSoup4, tables2
 
-
+---
 
 **In order to install psycopg2:**
 
