@@ -1,7 +1,6 @@
 from django.core.urlresolvers import reverse_lazy
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
-from django.utils import timezone
 from django.views.generic.edit import DeleteView # this is the generic view
 from .models import WebsiteCategory, Website, WebPage
 from .tables import WebsiteTable, CategoryTable
