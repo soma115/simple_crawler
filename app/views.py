@@ -7,11 +7,9 @@ from .models import WebsiteCategory, Website, WebPage
 from .tables import WebsiteTable, CategoryTable
 from .forms import WebsiteForm, WebsiteCategoryForm
 from django_tables2 import RequestConfig
-from celery import Celery
 from celery.task import task
 import requests
 from bs4 import BeautifulSoup
-from django.conf import settings
 from django.utils import timezone
 from django.db import IntegrityError
 
